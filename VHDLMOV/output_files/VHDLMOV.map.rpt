@@ -1,0 +1,637 @@
+Analysis & Synthesis report for VHDLMOV
+Tue Mar 12 10:44:35 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |VHDLMOV|MESTADOSHMOV:I11|EDO
+  9. State Machine - |VHDLMOV|OBSTACLE:I7|EDO
+ 10. State Machine - |VHDLMOV|MESTADOSVSYNC:I3|EDO
+ 11. User-Specified and Inferred Latches
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Port Connectivity Checks: "CONTADOR8BITS:I6|SUMAUNO8:I0|ha:I7"
+ 16. Port Connectivity Checks: "CONTADOR8BITS:I6|SUMAUNO8:I0|ha:I0"
+ 17. Port Connectivity Checks: "CONTADOR16BITS:I4|SUMAUNO16:I0|ha:I15"
+ 18. Port Connectivity Checks: "CONTADOR16BITS:I4|SUMAUNO16:I0|ha:I0"
+ 19. Port Connectivity Checks: "CONT800:I1|SUMAUNO10:I0|ha:I9"
+ 20. Port Connectivity Checks: "CONT800:I1|SUMAUNO10:I0|ha:I0"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Mar 12 10:44:35 2024       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; VHDLMOV                                     ;
+; Top-level Entity Name              ; VHDLMOV                                     ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 466                                         ;
+;     Total combinational functions  ; 466                                         ;
+;     Dedicated logic registers      ; 147                                         ;
+; Total registers                    ; 147                                         ;
+; Total pins                         ; 22                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; VHDLMOV            ; VHDLMOV            ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++--------------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                  ; Library ;
++--------------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
+; ../CONTADOR20BITS/CONTADOR20BITS.vhd ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR20BITS/CONTADOR20BITS.vhd ;         ;
+; ../MOVOBST/MOVOBST.vhd               ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVOBST/MOVOBST.vhd               ;         ;
+; ../OBSTACLE/OBSTACLE.vhd             ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/OBSTACLE/OBSTACLE.vhd             ;         ;
+; ../CONTADOR8BITS/CONTADOR8BITS.vhd   ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR8BITS/CONTADOR8BITS.vhd   ;         ;
+; ../SUMAUNO8/SUMAUNO8.vhd             ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO8/SUMAUNO8.vhd             ;         ;
+; ../MOVV/MOVV.vhd                     ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVV/MOVV.vhd                     ;         ;
+; ../MOVH/MOVH.vhd                     ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVH/MOVH.vhd                     ;         ;
+; ../CONTADOR16BITS/CONTADOR16BITS.vhd ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR16BITS/CONTADOR16BITS.vhd ;         ;
+; ../SUMAUNO16/SUMAUNO16.vhd           ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO16/SUMAUNO16.vhd           ;         ;
+; ../MESTADOSHMOV/MESTADOSHMOV.vhd     ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd     ;         ;
+; ../MESTADOSVSYNC/MESTADOSVSYNC.vhd   ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSVSYNC/MESTADOSVSYNC.vhd   ;         ;
+; ../CONTA10BITS/CONTA10BITS.vhd       ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTA10BITS/CONTA10BITS.vhd       ;         ;
+; ../DIVFREQ2/DIVFREQ2.vhd             ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/DIVFREQ2/DIVFREQ2.vhd             ;         ;
+; ../FFD/FFD.vhd                       ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/FFD/FFD.vhd                       ;         ;
+; ../CONTMOD525/CONTMOD525.vhd         ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTMOD525/CONTMOD525.vhd         ;         ;
+; ../CONT800/CONT800.vhd               ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONT800/CONT800.vhd               ;         ;
+; ../SUMAUNO10/SUMAUNO10.vhd           ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO10/SUMAUNO10.vhd           ;         ;
+; ../HA/HA.vhd                         ; yes             ; User VHDL File        ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/HA/HA.vhd                         ;         ;
+; vhdlmov.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd               ;         ;
++--------------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 466       ;
+;                                             ;           ;
+; Total combinational functions               ; 466       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 179       ;
+;     -- 3 input functions                    ; 111       ;
+;     -- <=2 input functions                  ; 176       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 303       ;
+;     -- arithmetic mode                      ; 163       ;
+;                                             ;           ;
+; Total registers                             ; 147       ;
+;     -- Dedicated logic registers            ; 147       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 22        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; RST~input ;
+; Maximum fan-out                             ; 115       ;
+; Total fan-out                               ; 1955      ;
+; Average fan-out                             ; 2.98      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+----------------+--------------+
+; |VHDLMOV                   ; 466 (1)             ; 147 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |VHDLMOV                                                 ; VHDLMOV        ; work         ;
+;    |CONT800:I1|            ; 13 (10)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONT800:I1                                      ; CONT800        ; work         ;
+;       |SUMAUNO10:I0|       ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONT800:I1|SUMAUNO10:I0                         ; SUMAUNO10      ; work         ;
+;          |ha:I3|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONT800:I1|SUMAUNO10:I0|ha:I3                   ; ha             ; work         ;
+;          |ha:I6|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONT800:I1|SUMAUNO10:I0|ha:I6                   ; ha             ; work         ;
+;          |ha:I9|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONT800:I1|SUMAUNO10:I0|ha:I9                   ; ha             ; work         ;
+;    |CONTADOR16BITS:I4|     ; 27 (27)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTADOR16BITS:I4                               ; CONTADOR16BITS ; work         ;
+;    |CONTADOR20BITS:I5|     ; 27 (27)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTADOR20BITS:I5                               ; CONTADOR20BITS ; work         ;
+;    |CONTADOR8BITS:I6|      ; 12 (12)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTADOR8BITS:I6                                ; CONTADOR8BITS  ; work         ;
+;    |CONTMOD525:I2|         ; 15 (2)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTMOD525:I2                                   ; CONTMOD525     ; work         ;
+;       |CONTA10BITS:I0|     ; 13 (11)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTMOD525:I2|CONTA10BITS:I0                    ; CONTA10BITS    ; work         ;
+;          |SUMAUNO10:I0|    ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTMOD525:I2|CONTA10BITS:I0|SUMAUNO10:I0       ; SUMAUNO10      ; work         ;
+;             |ha:I3|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTMOD525:I2|CONTA10BITS:I0|SUMAUNO10:I0|ha:I3 ; ha             ; work         ;
+;             |ha:I6|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|CONTMOD525:I2|CONTA10BITS:I0|SUMAUNO10:I0|ha:I6 ; ha             ; work         ;
+;    |DIVFREQ2:I0|           ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|DIVFREQ2:I0                                     ; DIVFREQ2       ; work         ;
+;       |FFD:I0|             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|DIVFREQ2:I0|FFD:I0                              ; FFD            ; work         ;
+;    |MESTADOSHMOV:I11|      ; 90 (90)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|MESTADOSHMOV:I11                                ; MESTADOSHMOV   ; work         ;
+;    |MESTADOSVSYNC:I3|      ; 16 (16)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|MESTADOSVSYNC:I3                                ; MESTADOSVSYNC  ; work         ;
+;    |MOVH:I9|               ; 101 (101)           ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|MOVH:I9                                         ; MOVH           ; work         ;
+;    |MOVOBST:I8|            ; 28 (28)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|MOVOBST:I8                                      ; MOVOBST        ; work         ;
+;    |MOVV:I10|              ; 102 (102)           ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|MOVV:I10                                        ; MOVV           ; work         ;
+;    |OBSTACLE:I7|           ; 33 (33)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VHDLMOV|OBSTACLE:I7                                     ; OBSTACLE       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |VHDLMOV|MESTADOSHMOV:I11|EDO           ;
++----------+--------+--------+--------+--------+----------+
+; Name     ; EDO.S4 ; EDO.S3 ; EDO.S2 ; EDO.S1 ; EDO.IDLE ;
++----------+--------+--------+--------+--------+----------+
+; EDO.IDLE ; 0      ; 0      ; 0      ; 0      ; 0        ;
+; EDO.S1   ; 0      ; 0      ; 0      ; 1      ; 1        ;
+; EDO.S2   ; 0      ; 0      ; 1      ; 0      ; 1        ;
+; EDO.S3   ; 0      ; 1      ; 0      ; 0      ; 1        ;
+; EDO.S4   ; 1      ; 0      ; 0      ; 0      ; 1        ;
++----------+--------+--------+--------+--------+----------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------+
+; State Machine - |VHDLMOV|OBSTACLE:I7|EDO                                                             ;
++----------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------+
+; Name     ; EDO.S9 ; EDO.S8 ; EDO.S7 ; EDO.S6 ; EDO.S5 ; EDO.S4 ; EDO.S3 ; EDO.S2 ; EDO.S1 ; EDO.IDLE ;
++----------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------+
+; EDO.IDLE ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0        ;
+; EDO.S1   ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 1        ;
+; EDO.S2   ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 1        ;
+; EDO.S3   ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 1        ;
+; EDO.S4   ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 1        ;
+; EDO.S5   ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 1        ;
+; EDO.S6   ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1        ;
+; EDO.S7   ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1        ;
+; EDO.S8   ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1        ;
+; EDO.S9   ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1        ;
++----------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |VHDLMOV|MESTADOSVSYNC:I3|EDO           ;
++----------+--------+--------+--------+--------+----------+
+; Name     ; EDO.S4 ; EDO.S3 ; EDO.S2 ; EDO.S1 ; EDO.IDLE ;
++----------+--------+--------+--------+--------+----------+
+; EDO.IDLE ; 0      ; 0      ; 0      ; 0      ; 0        ;
+; EDO.S1   ; 0      ; 0      ; 0      ; 1      ; 1        ;
+; EDO.S2   ; 0      ; 0      ; 1      ; 0      ; 1        ;
+; EDO.S3   ; 0      ; 1      ; 0      ; 0      ; 1        ;
+; EDO.S4   ; 1      ; 0      ; 0      ; 0      ; 1        ;
++----------+--------+--------+--------+--------+----------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; MESTADOSHMOV:I11|R[0]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|R[1]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|R[2]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|R[3]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|G[0]                               ; GND                     ; yes                    ;
+; MESTADOSHMOV:I11|G[1]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|G[2]                               ; GND                     ; yes                    ;
+; MESTADOSHMOV:I11|G[3]                               ; GND                     ; yes                    ;
+; MESTADOSHMOV:I11|B[0]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|B[1]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|B[2]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; MESTADOSHMOV:I11|B[3]                               ; MESTADOSVSYNC:I3|EDO.S3 ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 147   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 24    ;
+; Number of registers using Asynchronous Clear ; 147   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; MOVOBST:I8|valor_int[5]                 ; 3       ;
+; MOVOBST:I8|valor_int[1]                 ; 3       ;
+; MOVOBST:I8|valor_int[0]                 ; 3       ;
+; MOVOBST:I8|valor_int2[6]                ; 3       ;
+; MOVOBST:I8|valor_int2[5]                ; 3       ;
+; MOVOBST:I8|valor_int2[4]                ; 3       ;
+; MOVOBST:I8|valor_int2[1]                ; 3       ;
+; MOVOBST:I8|valor_int2[0]                ; 3       ;
+; MOVH:I9|valor_int[7]                    ; 6       ;
+; MOVH:I9|valor_int[4]                    ; 5       ;
+; MOVH:I9|valor_int2[7]                   ; 6       ;
+; MOVH:I9|valor_int2[6]                   ; 6       ;
+; MOVH:I9|valor_int2[1]                   ; 4       ;
+; MOVV:I10|valor_int[5]                   ; 7       ;
+; MOVV:I10|valor_int[1]                   ; 4       ;
+; MOVV:I10|valor_int[0]                   ; 4       ;
+; MOVV:I10|valor_int2[6]                  ; 7       ;
+; MOVV:I10|valor_int2[4]                  ; 5       ;
+; MOVV:I10|valor_int2[2]                  ; 5       ;
+; MOVV:I10|valor_int2[0]                  ; 4       ;
+; Total number of inverted registers = 20 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |VHDLMOV|MOVOBST:I8|valor_int[3]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |VHDLMOV|MOVOBST:I8|valor_int2[8] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |VHDLMOV|MOVH:I9|valor_int[5]     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |VHDLMOV|MOVH:I9|valor_int2[5]    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |VHDLMOV|MOVV:I10|valor_int[3]    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |VHDLMOV|MOVV:I10|valor_int2[1]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |VHDLMOV|MOVOBST:I8|valor_int[5]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |VHDLMOV|MOVOBST:I8|valor_int2[1] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |VHDLMOV|MOVH:I9|valor_int[4]     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |VHDLMOV|MOVH:I9|valor_int2[6]    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |VHDLMOV|MOVV:I10|valor_int[0]    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |VHDLMOV|MOVV:I10|valor_int2[6]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CONTADOR8BITS:I6|SUMAUNO8:I0|ha:I7"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "CONTADOR8BITS:I6|SUMAUNO8:I0|ha:I0" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                         ;
++------+-------+----------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CONTADOR16BITS:I4|SUMAUNO16:I0|ha:I15"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "CONTADOR16BITS:I4|SUMAUNO16:I0|ha:I0" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                           ;
++------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CONT800:I1|SUMAUNO10:I0|ha:I9"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "CONT800:I1|SUMAUNO10:I0|ha:I0" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 147                         ;
+;     CLR               ; 76                          ;
+;     CLR SLD           ; 24                          ;
+;     ENA CLR           ; 47                          ;
+; cycloneiii_lcell_comb ; 468                         ;
+;     arith             ; 163                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 107                         ;
+;         3 data inputs ; 54                          ;
+;     normal            ; 305                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 179                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.42                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Mar 12 10:44:24 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VHDLMOV -c VHDLMOV
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/contador20bits/contador20bits.vhd
+    Info (12022): Found design unit 1: CONTADOR20BITS-Behavioral File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR20BITS/CONTADOR20BITS.vhd Line: 12
+    Info (12023): Found entity 1: CONTADOR20BITS File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR20BITS/CONTADOR20BITS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/movobst/movobst.vhd
+    Info (12022): Found design unit 1: MOVOBST-Behavioral File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVOBST/MOVOBST.vhd Line: 15
+    Info (12023): Found entity 1: MOVOBST File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVOBST/MOVOBST.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/obstacle/obstacle.vhd
+    Info (12022): Found design unit 1: OBSTACLE-ARC File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/OBSTACLE/OBSTACLE.vhd Line: 17
+    Info (12023): Found entity 1: OBSTACLE File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/OBSTACLE/OBSTACLE.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/contador8bits/contador8bits.vhd
+    Info (12022): Found design unit 1: CONTADOR8BITS-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR8BITS/CONTADOR8BITS.vhd Line: 15
+    Info (12023): Found entity 1: CONTADOR8BITS File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR8BITS/CONTADOR8BITS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/contador24bits/contador24bits.vhd
+    Info (12022): Found design unit 1: CONTADOR24BITS-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR24BITS/CONTADOR24BITS.vhd Line: 15
+    Info (12023): Found entity 1: CONTADOR24BITS File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR24BITS/CONTADOR24BITS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/sumauno24/sumauno24.vhd
+    Info (12022): Found design unit 1: SUMAUNO24-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO24/SUMAUNO24.vhd Line: 18
+    Info (12023): Found entity 1: SUMAUNO24 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO24/SUMAUNO24.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/sumauno8/sumauno8.vhd
+    Info (12022): Found design unit 1: SUMAUNO8-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO8/SUMAUNO8.vhd Line: 18
+    Info (12023): Found entity 1: SUMAUNO8 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO8/SUMAUNO8.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/movv/movv.vhd
+    Info (12022): Found design unit 1: MOVV-Behavioral File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVV/MOVV.vhd Line: 15
+    Info (12023): Found entity 1: MOVV File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVV/MOVV.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/movh/movh.vhd
+    Info (12022): Found design unit 1: MOVH-Behavioral File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVH/MOVH.vhd Line: 15
+    Info (12023): Found entity 1: MOVH File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVH/MOVH.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/contador16bits/contador16bits.vhd
+    Info (12022): Found design unit 1: CONTADOR16BITS-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR16BITS/CONTADOR16BITS.vhd Line: 15
+    Info (12023): Found entity 1: CONTADOR16BITS File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR16BITS/CONTADOR16BITS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/sumauno16/sumauno16.vhd
+    Info (12022): Found design unit 1: SUMAUNO16-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO16/SUMAUNO16.vhd Line: 18
+    Info (12023): Found entity 1: SUMAUNO16 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO16/SUMAUNO16.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/mestadoshmov/mestadoshmov.vhd
+    Info (12022): Found design unit 1: MESTADOSHMOV-ARC File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 26
+    Info (12023): Found entity 1: MESTADOSHMOV File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/mestadoshsync/mestadoshsync.vhd
+    Info (12022): Found design unit 1: MESTADOSHSYNC-ARC File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHSYNC/MESTADOSHSYNC.vhd Line: 20
+    Info (12023): Found entity 1: MESTADOSHSYNC File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHSYNC/MESTADOSHSYNC.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/mestadosvsync/mestadosvsync.vhd
+    Info (12022): Found design unit 1: MESTADOSVSYNC-ARC File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSVSYNC/MESTADOSVSYNC.vhd Line: 18
+    Info (12023): Found entity 1: MESTADOSVSYNC File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSVSYNC/MESTADOSVSYNC.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/conta10bits/conta10bits.vhd
+    Info (12022): Found design unit 1: CONTA10BITS-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTA10BITS/CONTA10BITS.vhd Line: 15
+    Info (12023): Found entity 1: CONTA10BITS File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTA10BITS/CONTA10BITS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/divfreq2/divfreq2.vhd
+    Info (12022): Found design unit 1: DIVFREQ2-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/DIVFREQ2/DIVFREQ2.vhd Line: 11
+    Info (12023): Found entity 1: DIVFREQ2 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/DIVFREQ2/DIVFREQ2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/ffd/ffd.vhd
+    Info (12022): Found design unit 1: FFD-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/FFD/FFD.vhd Line: 12
+    Info (12023): Found entity 1: FFD File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/FFD/FFD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/contmod525/contmod525.vhd
+    Info (12022): Found design unit 1: CONTMOD525-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTMOD525/CONTMOD525.vhd Line: 15
+    Info (12023): Found entity 1: CONTMOD525 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTMOD525/CONTMOD525.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/cont800/cont800.vhd
+    Info (12022): Found design unit 1: CONT800-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONT800/CONT800.vhd Line: 16
+    Info (12023): Found entity 1: CONT800 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONT800/CONT800.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/sumauno10/sumauno10.vhd
+    Info (12022): Found design unit 1: SUMAUNO10-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO10/SUMAUNO10.vhd Line: 18
+    Info (12023): Found entity 1: SUMAUNO10 File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO10/SUMAUNO10.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/eduardo/desktop/logica_progra/vhdl/ha/ha.vhd
+    Info (12022): Found design unit 1: ha-arc File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/HA/HA.vhd Line: 20
+    Info (12023): Found entity 1: ha File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/HA/HA.vhd Line: 12
+Warning (12125): Using design file vhdlmov.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: VHDLMOV-RTL File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 13
+    Info (12023): Found entity 1: VHDLMOV File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 7
+Info (12127): Elaborating entity "VHDLMOV" for the top level hierarchy
+Info (12128): Elaborating entity "DIVFREQ2" for hierarchy "DIVFREQ2:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 132
+Info (12128): Elaborating entity "FFD" for hierarchy "DIVFREQ2:I0|FFD:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/DIVFREQ2/DIVFREQ2.vhd Line: 25
+Info (12128): Elaborating entity "CONT800" for hierarchy "CONT800:I1" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 133
+Info (12128): Elaborating entity "SUMAUNO10" for hierarchy "CONT800:I1|SUMAUNO10:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONT800/CONT800.vhd Line: 32
+Info (12128): Elaborating entity "ha" for hierarchy "CONT800:I1|SUMAUNO10:I0|ha:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/SUMAUNO10/SUMAUNO10.vhd Line: 34
+Info (12128): Elaborating entity "CONTMOD525" for hierarchy "CONTMOD525:I2" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at CONTMOD525.vhd(35): signal "RST" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTMOD525/CONTMOD525.vhd Line: 35
+Info (12128): Elaborating entity "CONTA10BITS" for hierarchy "CONTMOD525:I2|CONTA10BITS:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTMOD525/CONTMOD525.vhd Line: 28
+Info (12128): Elaborating entity "MESTADOSVSYNC" for hierarchy "MESTADOSVSYNC:I3" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 135
+Info (12128): Elaborating entity "CONTADOR16BITS" for hierarchy "CONTADOR16BITS:I4" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 136
+Info (12128): Elaborating entity "SUMAUNO16" for hierarchy "CONTADOR16BITS:I4|SUMAUNO16:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR16BITS/CONTADOR16BITS.vhd Line: 31
+Info (12128): Elaborating entity "CONTADOR20BITS" for hierarchy "CONTADOR20BITS:I5" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 137
+Info (12128): Elaborating entity "CONTADOR8BITS" for hierarchy "CONTADOR8BITS:I6" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 138
+Info (12128): Elaborating entity "SUMAUNO8" for hierarchy "CONTADOR8BITS:I6|SUMAUNO8:I0" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/CONTADOR8BITS/CONTADOR8BITS.vhd Line: 31
+Info (12128): Elaborating entity "OBSTACLE" for hierarchy "OBSTACLE:I7" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 139
+Info (12128): Elaborating entity "MOVOBST" for hierarchy "MOVOBST:I8" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 140
+Info (12128): Elaborating entity "MOVH" for hierarchy "MOVH:I9" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 145
+Info (12128): Elaborating entity "MOVV" for hierarchy "MOVV:I10" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 146
+Info (12128): Elaborating entity "MESTADOSHMOV" for hierarchy "MESTADOSHMOV:I11" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/VHDLMOV/vhdlmov.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(102): signal "cuenta" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(102): signal "CONTMOV1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(102): signal "CONTMOV2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(102): signal "CUENTAV" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(102): signal "CONTMOV3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(102): signal "CONTMOV4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(124): signal "cuenta" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(124): signal "CUENTAV" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(124): signal "OBS1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at MESTADOSHMOV.vhd(124): signal "OBS2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at MESTADOSHMOV.vhd(83): inferring latch(es) for signal or variable "R", which holds its previous value in one or more paths through the process File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Warning (10631): VHDL Process Statement warning at MESTADOSHMOV.vhd(83): inferring latch(es) for signal or variable "G", which holds its previous value in one or more paths through the process File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Warning (10631): VHDL Process Statement warning at MESTADOSHMOV.vhd(83): inferring latch(es) for signal or variable "B", which holds its previous value in one or more paths through the process File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "B[0]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "B[1]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "B[2]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "B[3]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "G[0]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "G[1]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "G[2]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "G[3]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "R[0]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "R[1]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "R[2]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (10041): Inferred latch for "R[3]" at MESTADOSHMOV.vhd(83) File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|R[3]" merged with LATCH primitive "MESTADOSHMOV:I11|R[0]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|R[2]" merged with LATCH primitive "MESTADOSHMOV:I11|R[0]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|R[1]" merged with LATCH primitive "MESTADOSHMOV:I11|R[0]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|B[3]" merged with LATCH primitive "MESTADOSHMOV:I11|G[1]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|B[2]" merged with LATCH primitive "MESTADOSHMOV:I11|G[1]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|B[1]" merged with LATCH primitive "MESTADOSHMOV:I11|G[1]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+    Info (13026): Duplicate LATCH primitive "MESTADOSHMOV:I11|B[0]" merged with LATCH primitive "MESTADOSHMOV:I11|G[1]" File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MESTADOSHMOV/MESTADOSHMOV.vhd Line: 83
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Eduardo/Desktop/Logica_Progra/VHDL/MOVH/MOVH.vhd Line: 21
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 489 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 467 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Tue Mar 12 10:44:35 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+

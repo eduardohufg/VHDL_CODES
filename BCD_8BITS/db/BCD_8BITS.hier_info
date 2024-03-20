@@ -1,0 +1,499 @@
+|BCD_8BITS
+DATO[0] => BIN2BCD:I0.BIN[0]
+DATO[1] => BIN2BCD:I0.BIN[1]
+DATO[2] => BIN2BCD:I0.BIN[2]
+DATO[3] => BIN2BCD:I0.BIN[3]
+DATO[4] => BIN2BCD:I1.BIN[0]
+DATO[5] => BIN2BCD:I1.BIN[1]
+DATO[6] => BIN2BCD:I1.BIN[2]
+DATO[7] => BIN2BCD:I1.BIN[3]
+S1 => SIG1[0].CLK
+S1 => SIG1[1].CLK
+S1 => SIG1[2].CLK
+S1 => SIG1[3].CLK
+S1 => SIG1[4].CLK
+S1 => SIG1[5].CLK
+S1 => SIG1[6].CLK
+S1 => SIG1[7].CLK
+S2 => SIG2[0].CLK
+S2 => SIG2[1].CLK
+S2 => SIG2[2].CLK
+S2 => SIG2[3].CLK
+S2 => SIG2[4].CLK
+S2 => SIG2[5].CLK
+S2 => SIG2[6].CLK
+S2 => SIG2[7].CLK
+SALIDA[0] << BCD_CODER:I4.SEG[0]
+SALIDA[1] << BCD_CODER:I4.SEG[1]
+SALIDA[2] << BCD_CODER:I4.SEG[2]
+SALIDA[3] << BCD_CODER:I4.SEG[3]
+SALIDA[4] << BCD_CODER:I4.SEG[4]
+SALIDA[5] << BCD_CODER:I4.SEG[5]
+SALIDA[6] << BCD_CODER:I4.SEG[6]
+SALIDA[7] << BCD_CODER:I5.SEG[0]
+SALIDA[8] << BCD_CODER:I5.SEG[1]
+SALIDA[9] << BCD_CODER:I5.SEG[2]
+SALIDA[10] << BCD_CODER:I5.SEG[3]
+SALIDA[11] << BCD_CODER:I5.SEG[4]
+SALIDA[12] << BCD_CODER:I5.SEG[5]
+SALIDA[13] << BCD_CODER:I5.SEG[6]
+
+
+|BCD_8BITS|BIN2BCD:I0
+BIN[0] => Mux3.IN19
+BIN[1] => Mux0.IN10
+BIN[1] => Mux2.IN5
+BIN[1] => Mux3.IN18
+BIN[2] => Mux0.IN9
+BIN[2] => Mux1.IN5
+BIN[2] => Mux3.IN17
+BIN[3] => Mux0.IN8
+BIN[3] => Mux1.IN4
+BIN[3] => Mux2.IN4
+BIN[3] => Mux3.IN16
+BCD[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+BCD[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+BCD[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+BCD[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|BIN2BCD:I1
+BIN[0] => Mux3.IN19
+BIN[1] => Mux0.IN10
+BIN[1] => Mux2.IN5
+BIN[1] => Mux3.IN18
+BIN[2] => Mux0.IN9
+BIN[2] => Mux1.IN5
+BIN[2] => Mux3.IN17
+BIN[3] => Mux0.IN8
+BIN[3] => Mux1.IN4
+BIN[3] => Mux2.IN4
+BIN[3] => Mux3.IN16
+BCD[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+BCD[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+BCD[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+BCD[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2
+A[0] => suma4:I0.a[0]
+A[1] => suma4:I0.a[1]
+A[2] => suma4:I0.a[2]
+A[3] => suma4:I0.a[3]
+B[0] => suma4:I0.b[0]
+B[1] => suma4:I0.b[1]
+B[2] => suma4:I0.b[2]
+B[3] => suma4:I0.b[3]
+CIN => suma4:I0.Cin
+S[0] <= suma4:I0.s[0]
+S[1] <= ha:I1.s
+S[2] <= fa:I2.s
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= CS4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0
+a[0] => fa:I0.a
+a[1] => fa:I1.a
+a[2] => fa:I2.a
+a[3] => fa:I3.a
+b[0] => fa:I0.b
+b[1] => fa:I1.b
+b[2] => fa:I2.b
+b[3] => fa:I3.b
+Cin => fa:I0.Cin
+s[0] <= fa:I0.s
+s[1] <= fa:I1.s
+s[2] <= fa:I2.s
+s[3] <= fa:I3.s
+Cout <= fa:I3.Cout
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I0
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I0|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I0|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I1
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I1|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I1|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I2
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I2|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I2|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I3
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I3|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|suma4:I0|fa:I3|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|ha:I1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|fa:I2
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|fa:I2|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I2|fa:I2|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3
+A[0] => suma4:I0.a[0]
+A[1] => suma4:I0.a[1]
+A[2] => suma4:I0.a[2]
+A[3] => suma4:I0.a[3]
+B[0] => suma4:I0.b[0]
+B[1] => suma4:I0.b[1]
+B[2] => suma4:I0.b[2]
+B[3] => suma4:I0.b[3]
+CIN => suma4:I0.Cin
+S[0] <= suma4:I0.s[0]
+S[1] <= ha:I1.s
+S[2] <= fa:I2.s
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= CS4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0
+a[0] => fa:I0.a
+a[1] => fa:I1.a
+a[2] => fa:I2.a
+a[3] => fa:I3.a
+b[0] => fa:I0.b
+b[1] => fa:I1.b
+b[2] => fa:I2.b
+b[3] => fa:I3.b
+Cin => fa:I0.Cin
+s[0] <= fa:I0.s
+s[1] <= fa:I1.s
+s[2] <= fa:I2.s
+s[3] <= fa:I3.s
+Cout <= fa:I3.Cout
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I0
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I0|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I0|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I1
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I1|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I1|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I2
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I2|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I2|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I3
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I3|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|suma4:I0|fa:I3|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|ha:I1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|fa:I2
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|fa:I2|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|SUM_BCD:I3|fa:I2|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|BCD_CODER:I4
+BCD[0] => Mux0.IN19
+BCD[0] => Mux1.IN19
+BCD[0] => Mux2.IN19
+BCD[0] => Mux3.IN19
+BCD[0] => Mux4.IN19
+BCD[0] => Mux5.IN19
+BCD[0] => Mux6.IN19
+BCD[1] => Mux0.IN18
+BCD[1] => Mux1.IN18
+BCD[1] => Mux2.IN18
+BCD[1] => Mux3.IN18
+BCD[1] => Mux4.IN18
+BCD[1] => Mux5.IN18
+BCD[1] => Mux6.IN18
+BCD[2] => Mux0.IN17
+BCD[2] => Mux1.IN17
+BCD[2] => Mux2.IN17
+BCD[2] => Mux3.IN17
+BCD[2] => Mux4.IN17
+BCD[2] => Mux5.IN17
+BCD[2] => Mux6.IN17
+BCD[3] => Mux0.IN16
+BCD[3] => Mux1.IN16
+BCD[3] => Mux2.IN16
+BCD[3] => Mux3.IN16
+BCD[3] => Mux4.IN16
+BCD[3] => Mux5.IN16
+BCD[3] => Mux6.IN16
+SEG[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_8BITS|BCD_CODER:I5
+BCD[0] => Mux0.IN19
+BCD[0] => Mux1.IN19
+BCD[0] => Mux2.IN19
+BCD[0] => Mux3.IN19
+BCD[0] => Mux4.IN19
+BCD[0] => Mux5.IN19
+BCD[0] => Mux6.IN19
+BCD[1] => Mux0.IN18
+BCD[1] => Mux1.IN18
+BCD[1] => Mux2.IN18
+BCD[1] => Mux3.IN18
+BCD[1] => Mux4.IN18
+BCD[1] => Mux5.IN18
+BCD[1] => Mux6.IN18
+BCD[2] => Mux0.IN17
+BCD[2] => Mux1.IN17
+BCD[2] => Mux2.IN17
+BCD[2] => Mux3.IN17
+BCD[2] => Mux4.IN17
+BCD[2] => Mux5.IN17
+BCD[2] => Mux6.IN17
+BCD[3] => Mux0.IN16
+BCD[3] => Mux1.IN16
+BCD[3] => Mux2.IN16
+BCD[3] => Mux3.IN16
+BCD[3] => Mux4.IN16
+BCD[3] => Mux5.IN16
+BCD[3] => Mux6.IN16
+SEG[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,305 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -6.196
+TNS   : -12.319
+
+Type  : Slow 1200mV 85C Model Setup 'CLK2'
+Slack : -4.615
+TNS   : -72.204
+
+Type  : Slow 1200mV 85C Model Setup 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -3.828
+TNS   : -31.829
+
+Type  : Slow 1200mV 85C Model Setup 'CONTADOR16BITS:I4|Q[0]'
+Slack : -3.356
+TNS   : -169.933
+
+Type  : Slow 1200mV 85C Model Setup 'CONT800:I1|ov'
+Slack : -1.684
+TNS   : -12.456
+
+Type  : Slow 1200mV 85C Model Setup 'CONTADOR20BITS:I5|overflow'
+Slack : -0.956
+TNS   : -4.352
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -0.717
+TNS   : -0.717
+
+Type  : Slow 1200mV 85C Model Hold 'DIVFREQ2:I0|FFD:I0|q'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CONT800:I1|ov'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CONTADOR16BITS:I4|Q[0]'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CONTADOR20BITS:I5|overflow'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK2'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.729
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 1.112
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CONT800:I1|ov'
+Slack : -2.323
+TNS   : -20.094
+
+Type  : Slow 1200mV 85C Model Recovery 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.370
+TNS   : -0.674
+
+Type  : Slow 1200mV 85C Model Removal 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.260
+TNS   : -0.502
+
+Type  : Slow 1200mV 85C Model Removal 'CONT800:I1|ov'
+Slack : 1.810
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK2'
+Slack : -3.000
+TNS   : -54.911
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CONTADOR16BITS:I4|Q[0]'
+Slack : -1.403
+TNS   : -98.210
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.403
+TNS   : -29.463
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CONT800:I1|ov'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CONTADOR20BITS:I5|overflow'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -5.747
+TNS   : -11.421
+
+Type  : Slow 1200mV 0C Model Setup 'CLK2'
+Slack : -4.085
+TNS   : -63.041
+
+Type  : Slow 1200mV 0C Model Setup 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -3.474
+TNS   : -27.746
+
+Type  : Slow 1200mV 0C Model Setup 'CONTADOR16BITS:I4|Q[0]'
+Slack : -3.034
+TNS   : -151.747
+
+Type  : Slow 1200mV 0C Model Setup 'CONT800:I1|ov'
+Slack : -1.430
+TNS   : -10.562
+
+Type  : Slow 1200mV 0C Model Setup 'CONTADOR20BITS:I5|overflow'
+Slack : -0.776
+TNS   : -3.446
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -0.581
+TNS   : -0.581
+
+Type  : Slow 1200mV 0C Model Hold 'CONTADOR16BITS:I4|Q[0]'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DIVFREQ2:I0|FFD:I0|q'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CONTADOR20BITS:I5|overflow'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CONT800:I1|ov'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK2'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.646
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 1.112
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CONT800:I1|ov'
+Slack : -2.049
+TNS   : -17.670
+
+Type  : Slow 1200mV 0C Model Recovery 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.365
+TNS   : -0.676
+
+Type  : Slow 1200mV 0C Model Removal 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.134
+TNS   : -0.250
+
+Type  : Slow 1200mV 0C Model Removal 'CONT800:I1|ov'
+Slack : 1.673
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK2'
+Slack : -3.000
+TNS   : -54.911
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CONTADOR16BITS:I4|Q[0]'
+Slack : -1.403
+TNS   : -98.210
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.403
+TNS   : -29.463
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CONT800:I1|ov'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CONTADOR20BITS:I5|overflow'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -2.139
+TNS   : -4.262
+
+Type  : Fast 1200mV 0C Model Setup 'CLK2'
+Slack : -1.650
+TNS   : -13.143
+
+Type  : Fast 1200mV 0C Model Setup 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.066
+TNS   : -4.128
+
+Type  : Fast 1200mV 0C Model Setup 'CONTADOR16BITS:I4|Q[0]'
+Slack : -0.937
+TNS   : -35.236
+
+Type  : Fast 1200mV 0C Model Setup 'CONT800:I1|ov'
+Slack : -0.160
+TNS   : -0.702
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.046
+TNS   : -0.046
+
+Type  : Fast 1200mV 0C Model Setup 'CONTADOR20BITS:I5|overflow'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DIVFREQ2:I0|FFD:I0|q'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CONT800:I1|ov'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CONTADOR16BITS:I4|Q[0]'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CONTADOR20BITS:I5|overflow'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK2'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.581
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CONT800:I1|ov'
+Slack : -0.495
+TNS   : -3.306
+
+Type  : Fast 1200mV 0C Model Recovery 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.007
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CONT800:I1|ov'
+Slack : 0.760
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK2'
+Slack : -3.000
+TNS   : -40.793
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.021
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CONTADOR16BITS:I4|Q[0]'
+Slack : -1.000
+TNS   : -70.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CONT800:I1|ov'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CONTADOR20BITS:I5|overflow'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.350
+TNS   : 0.000
+
+------------------------------------------------------------

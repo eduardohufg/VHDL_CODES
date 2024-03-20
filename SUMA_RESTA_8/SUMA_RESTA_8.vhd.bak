@@ -1,0 +1,43 @@
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY SUMA_RESTA_8 IS
+
+PORT (a,b: IN STD_LOGIC_VECTOR (7 downto 0);
+      sel: IN STD_LOGIC;
+		s: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+		Cout: OUT STD_LOGIC);
+		
+END SUMA_RESTA_8;
+
+ARCHITECTURE rtl OF SUMA_RESTA_8 IS
+
+-- Definiendo el componente Fa
+
+Component SUMA8 is
+
+PORT (a,b: IN STD_LOGIC_VECTOR (7 downto 0);
+      Cin: IN STD_LOGIC;
+		s: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+		Cout: OUT STD_LOGIC);
+		
+end component SUMA8;
+
+
+ 
+
+Signal C: std_LOGIC_VECTOR(7 DOWNTO 1);
+
+--descripcion del circuito
+Begin 
+
+
+I0: SUMA8 port map (a, c, sel,s,Cout);
+
+c: <= b xor sel&sel&sel&sel&sel&sel&sel&sel;
+
+
+END rtl;
+
+

@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'EDO.ESPERA'
+Slack : -2.147
+TNS   : -17.730
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -1.683
+TNS   : -30.180
+
+Type  : Slow 1200mV 85C Model Hold 'EDO.ESPERA'
+Slack : 0.029
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -60.993
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EDO.ESPERA'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'EDO.ESPERA'
+Slack : -1.996
+TNS   : -15.234
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -1.549
+TNS   : -26.726
+
+Type  : Slow 1200mV 0C Model Hold 'EDO.ESPERA'
+Slack : -0.018
+TNS   : -0.018
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -60.993
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EDO.ESPERA'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.320
+TNS   : -2.537
+
+Type  : Fast 1200mV 0C Model Setup 'EDO.ESPERA'
+Slack : -0.288
+TNS   : -0.295
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : -0.014
+TNS   : -0.014
+
+Type  : Fast 1200mV 0C Model Hold 'EDO.ESPERA'
+Slack : 0.038
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -43.369
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EDO.ESPERA'
+Slack : 0.382
+TNS   : 0.000
+
+------------------------------------------------------------

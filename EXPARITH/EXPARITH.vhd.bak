@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL; -- Asumiendo que arith se refiere a esta o una librería similar.
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Sumador is
+    Port ( A : in  STD_LOGIC_VECTOR(3 downto 0);
+           B : in  STD_LOGIC_VECTOR(3 downto 0);
+           Suma : out  STD_LOGIC_VECTOR(3 downto 0));
+end Sumador;
+
+architecture Behavioral of Sumador is
+begin
+    Suma <= A + B; -- Suma los dos vectores de entrada.
+end Behavioral;

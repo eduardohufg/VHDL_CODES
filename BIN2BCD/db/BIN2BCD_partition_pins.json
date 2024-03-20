@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "BCD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BCD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BCD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BCD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BIN[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

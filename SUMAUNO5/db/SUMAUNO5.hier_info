@@ -1,0 +1,49 @@
+|SUMAUNO5
+A[0] => ha:I1.a
+A[1] => ha:I2.a
+A[2] => ha:I3.a
+A[3] => ha:I4.a
+A[4] => S.IN1
+S[0] << ha:I1.s
+S[1] << ha:I2.s
+S[2] << ha:I3.s
+S[3] << ha:I4.s
+S[4] << S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMAUNO5|ha:I1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMAUNO5|ha:I2
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMAUNO5|ha:I3
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMAUNO5|ha:I4
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

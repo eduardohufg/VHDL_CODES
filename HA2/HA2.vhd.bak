@@ -1,0 +1,18 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL
+
+ENTITY HA IS:
+PORT (a,b : IN STD_LOGIC;
+      s, Cout: OUT STD_LOGIC);
+END HA;
+
+--Seccion de definicion de la arquitectura
+
+ARCHITECTURE rtl OF HA IS
+
+BEGIN
+
+s <= a XOR b;
+Cout <= a and b;
+
+END rtl;

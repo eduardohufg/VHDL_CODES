@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "VA",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[9]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[2]",
+					"strict" : false
+				},
+				{
+					"name" : "START",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

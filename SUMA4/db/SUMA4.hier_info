@@ -1,0 +1,121 @@
+|SUMA4
+a[0] => fa:I0.a
+a[1] => fa:I1.a
+a[2] => fa:I2.a
+a[3] => fa:I3.a
+b[0] => fa:I0.b
+b[1] => fa:I1.b
+b[2] => fa:I2.b
+b[3] => fa:I3.b
+Cin => fa:I0.Cin
+s[0] <= fa:I0.s
+s[1] <= fa:I1.s
+s[2] <= fa:I2.s
+s[3] <= fa:I3.s
+Cout <= fa:I3.Cout
+
+
+|SUMA4|fa:I0
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I0|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I0|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I1
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I1|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I1|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I2
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I2|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I2|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I3
+a => ha:HA0.a
+b => ha:HA0.b
+Cin => ha:HA1.b
+s <= ha:HA1.s
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I3|ha:HA0
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SUMA4|fa:I3|ha:HA1
+a => s.IN0
+a => Cout.IN0
+b => s.IN1
+b => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

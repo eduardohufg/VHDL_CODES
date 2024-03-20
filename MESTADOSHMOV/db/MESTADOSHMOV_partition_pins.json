@@ -1,0 +1,401 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CUENTAV[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[8]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ENA",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OBS2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cuenta[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CONTMOV3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VA",
+					"strict" : false
+				},
+				{
+					"name" : "START",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

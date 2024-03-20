@@ -1,0 +1,73 @@
+--Declaracion de librerias
+library ieee;
+use ieee.std_logic_1164.all;
+
+--Entidad del Circuito
+
+ENTITY VGA IS
+	PORT(CLK, RST, START: IN STD_logic;
+			HSYNC, VSYNC: OUT STD_logic;
+			R,G,B: STD_logic_VECTOR (3 DOWNTO 0));
+END VGA;
+
+ARCHITECTURE RTL OF VGA IS
+	
+	COMPONENT DIVFREQ2 is
+	port(
+		clk, reset: in std_logic;
+		F: OUT STD_logic);
+		end COMPONENT DIVFREQ2;
+		
+	COMPONENT CONTMOD800 IS
+	PORT(CLK, RST: IN STD_LOGIC; --Bits de control
+			O: OUT STD_LOGIC_VECTOR (9 DOWNTO 0);
+			OV: OUT STD_LOGIC); --Over Flow del contador
+	END COMPONENT CONTMOD800;
+	
+	COMPONENT CONTMOD525 IS
+	PORT(CLK, RST: IN STD_LOGIC; --Bits de control
+			O: OUT STD_LOGIC_VECTOR (9 DOWNTO 0)); --Over Flow del contador
+	END COMPONENT CONTMOD525;
+	
+	COMPONENT MESTADOSVSYNC is
+   --	entradas de control, tiempos y salidas
+	port ( RST, CLK, START: in std_logic;
+			 cuenta    :  in std_logic_vector(9 downto 0);
+			 VSYNC: OUT STD_logic;
+			 VA: OUT STD_logic);
+	end COMPONENT MESTADOSVSYNC; 
+	
+	COMPONENT MESTADOSHSYNC is
+   --	entradas de control, tiempos y salidas
+	port ( RST, CLK, START: in std_logic;
+			 R,G,B  :  out std_logic_vector(3 downto 0);
+			 cuenta    :  in std_logic_vector(9 downto 0);
+			 HSYNC: OUT STD_logic;
+			 VA: IN STD_logic);
+	end COMPONENT MESTADOSHSYNC; 
+	
+	SIGNAL F, VAA: STD_LOGIC;
+	SIGNAL CONT800, CONT525: STD_LOGIC (9 DOWNTO 0);
+	SIGNAL OV800: STD_LOGIC;
+	
+	
+	BEGIN
+	
+	I0: DIVFREQ2 PORT MAP (CLK, RST, F);
+	I1: CONTMOD800 PORT MAP(CLK, RST, CONT800, OV800);
+	I2: CONTMOD525 PORT MAP(CLK, RST, CONT525);
+	I3: MESTADOSVSYNC PORT MAP(RST, CLK, START, CONT525, VSYNC, VAA);
+	I4: MESTADOSHSYNC PORT MAP (RST, CLK, START, R,G,B, CONT800, HSYNC, VAA);
+	
+	END RTL;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "valor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[4]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[5]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[6]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[7]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[8]",
+					"strict" : false
+				},
+				{
+					"name" : "valor[9]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "valor2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "btn_inc",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "btn_dec",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

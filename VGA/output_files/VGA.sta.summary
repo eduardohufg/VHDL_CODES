@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -4.044
+TNS   : -34.409
+
+Type  : Slow 1200mV 85C Model Setup 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -3.236
+TNS   : -6.442
+
+Type  : Slow 1200mV 85C Model Setup 'CONT800:I1|ov'
+Slack : -1.435
+TNS   : -9.017
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -0.956
+TNS   : -0.956
+
+Type  : Slow 1200mV 85C Model Hold 'DIVFREQ2:I0|FFD:I0|q'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CONT800:I1|ov'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.843
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 1.041
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CONT800:I1|ov'
+Slack : -1.829
+TNS   : -16.970
+
+Type  : Slow 1200mV 85C Model Recovery 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -1.064
+TNS   : -2.065
+
+Type  : Slow 1200mV 85C Model Removal 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CONT800:I1|ov'
+Slack : 1.810
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.403
+TNS   : -29.463
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CONT800:I1|ov'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -3.701
+TNS   : -29.827
+
+Type  : Slow 1200mV 0C Model Setup 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -2.979
+TNS   : -5.931
+
+Type  : Slow 1200mV 0C Model Setup 'CONT800:I1|ov'
+Slack : -1.201
+TNS   : -7.382
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -0.818
+TNS   : -0.818
+
+Type  : Slow 1200mV 0C Model Hold 'DIVFREQ2:I0|FFD:I0|q'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CONT800:I1|ov'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.752
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 1.089
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CONT800:I1|ov'
+Slack : -1.620
+TNS   : -14.912
+
+Type  : Slow 1200mV 0C Model Recovery 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.987
+TNS   : -1.917
+
+Type  : Slow 1200mV 0C Model Removal 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.523
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CONT800:I1|ov'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.403
+TNS   : -29.463
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CONT800:I1|ov'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.211
+TNS   : -5.279
+
+Type  : Fast 1200mV 0C Model Setup 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.961
+TNS   : -1.913
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.119
+TNS   : -0.119
+
+Type  : Fast 1200mV 0C Model Setup 'CONT800:I1|ov'
+Slack : -0.031
+TNS   : -0.061
+
+Type  : Fast 1200mV 0C Model Hold 'DIVFREQ2:I0|FFD:I0|q'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CONT800:I1|ov'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.526
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CONT800:I1|ov'
+Slack : -0.199
+TNS   : -1.502
+
+Type  : Fast 1200mV 0C Model Recovery 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : -0.036
+TNS   : -0.051
+
+Type  : Fast 1200mV 0C Model Removal 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CONT800:I1|ov'
+Slack : 0.749
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.006
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DIVFREQ2:I0|FFD:I0|q'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CONT800:I1|ov'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MESTADOSVSYNC:I3|EDO.S3'
+Slack : 0.347
+TNS   : 0.000
+
+------------------------------------------------------------

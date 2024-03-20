@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "T0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "T0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "T0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "T0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "T1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "T1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "T1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "T1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "T2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "T2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "T2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "T2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "T2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "T3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "T3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "T3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "T3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "T3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "T4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "T4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "T4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "T4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "T4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "T5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "T5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "T5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CASO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CASO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CASO[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

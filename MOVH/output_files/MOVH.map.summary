@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Mar 08 16:32:16 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : MOVH
+Top-level Entity Name : MOVH
+Family : MAX 10
+Total logic elements : 102
+    Total combinational functions : 102
+    Dedicated logic registers : 20
+Total registers : 20
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
